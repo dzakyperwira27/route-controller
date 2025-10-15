@@ -41,7 +41,6 @@
         <section id="articles" class="articles-section">
             <h2>Artikel Terbaru</h2>
 
-            
 
             <!-- 📚 Daftar Artikel -->
             <div id="articles-container" class="articles-container">
@@ -55,6 +54,7 @@
             <p>{{ Str::limit($blog['isi'] ?? $blog->isi ?? '', 150) }}...</p>
             <p><strong>Author:</strong> {{ $blog['author'] ?? 'Admin' }}</p>
             <p><strong>Kategori:</strong> {{ $blog['kategori'] ?? '-' }}</p>
+            
         </div>
     @endforeach
 </div>
