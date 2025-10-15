@@ -8,14 +8,6 @@
         "kategori": "Kuliner"
     },
     {
-        "judul": "Teknologi Laravel di Dunia Industri",
-        "author": "Daffa Perwira Yasig",
-        "tanggal": "7 Oktober 2025",
-        "isi": "Framework Laravel kini banyak digunakan dalam dunia industri karena kemudahan, keamanan, dan skalabilitasnya.",
-        "gambar": "images/foto2.jpeg",
-        "kategori": "Teknologi"
-    },
-    {
         "judul": "Kunjungan dari Malaysia ke SMKN 2 Padang Panjang",
         "author": "Dzikra Alkhalifi Yasig",
         "tanggal": "8 Oktober 2025",
@@ -24,123 +16,11 @@
         "kategori": "Pendidikan"
     },
     {
-        "judul": "Pengenalan Framework Vue.js di Kelas RPL",
-        "author": "Dzaky Perwira Yasig",
-        "tanggal": "9 Oktober 2025",
-        "isi": "Siswa jurusan Rekayasa Perangkat Lunak mempelajari dasar framework Vue.js untuk membangun antarmuka web interaktif.",
-        "gambar": "images/foto4.jpg",
-        "kategori": "Teknologi"
-    },
-    {
-        "judul": "Festival Kuliner Minang 2025",
-        "author": "Rani Fadillah",
-        "tanggal": "10 Oktober 2025",
-        "isi": "Acara ini memperkenalkan beragam kuliner tradisional Minangkabau kepada wisatawan lokal dan mancanegara.",
-        "gambar": "images/foto5.jpg",
-        "kategori": "Budaya"
-    },
-    {
-        "judul": "Workshop UI/UX Design di SMKN 2 Padang Panjang",
-        "author": "Dzaky Perwira Yasig",
-        "tanggal": "11 Oktober 2025",
-        "isi": "Siswa RPL mengikuti pelatihan desain antarmuka dan pengalaman pengguna untuk meningkatkan keterampilan desain digital.",
-        "gambar": "images/foto6.jpg",
-        "kategori": "Pendidikan"
-    },
-    {
-        "judul": "Inovasi Teknologi Pertanian di Sumatera Barat",
-        "author": "Rafli Ananda",
-        "tanggal": "12 Oktober 2025",
-        "isi": "Teknologi sensor dan IoT mulai diterapkan untuk meningkatkan produktivitas pertanian di daerah pedesaan.",
-        "gambar": "images/foto7.jpg",
-        "kategori": "Teknologi"
-    },
-    {
-        "judul": "Pentingnya Literasi Digital untuk Siswa",
-        "author": "Dzikra Alkhalifi Yasig",
-        "tanggal": "13 Oktober 2025",
-        "isi": "Kesadaran tentang literasi digital semakin meningkat di kalangan pelajar untuk menghadapi era teknologi informasi.",
-        "gambar": "images/foto8.jpg",
-        "kategori": "Edukasi"
-    },
-    {
-        "judul": "Pelatihan Pengembangan Aplikasi Mobile",
-        "author": "Dzaky Perwira Yasig",
-        "tanggal": "14 Oktober 2025",
-        "isi": "Kegiatan ini membimbing siswa dalam membuat aplikasi mobile menggunakan Flutter dan Firebase.",
-        "gambar": "images/foto9.jpg",
-        "kategori": "Teknologi"
-    },
-    {
-        "judul": "Produk Lokal Menembus Pasar Nasional",
-        "author": "Fadhil Ramadhan",
-        "tanggal": "15 Oktober 2025",
-        "isi": "UMKM dari Padang Panjang mulai memperluas distribusi produk ke berbagai provinsi di Indonesia.",
-        "gambar": "images/foto10.jpg",
-        "kategori": "Ekonomi"
-    },
-    {
-        "judul": "Kegiatan Bakti Sosial di Nagari Gunung",
-        "author": "Daffa Perwira Yasig",
-        "tanggal": "16 Oktober 2025",
-        "isi": "Siswa dan guru bergotong royong membersihkan lingkungan serta memberikan bantuan sosial kepada warga setempat.",
-        "gambar": "images/foto11.jpg",
-        "kategori": "Sosial"
-    },
-    {
-        "judul": "Penggunaan AI di Dunia Pendidikan",
-        "author": "Dzikra Alkhalifi Yasig",
-        "tanggal": "17 Oktober 2025",
-        "isi": "Kecerdasan buatan mulai diintegrasikan ke sistem pembelajaran untuk meningkatkan efektivitas dan efisiensi belajar.",
-        "gambar": "images/foto12.jpg",
-        "kategori": "Teknologi"
-    },
-    {
-        "judul": "Kopi Sumatera Barat Mulai Dikenal Dunia",
-        "author": "Rani Fadillah",
-        "tanggal": "18 Oktober 2025",
-        "isi": "Kopi arabika dari daerah Solok dan Tanah Datar berhasil menembus pasar internasional dengan cita rasa khasnya.",
-        "gambar": "images/foto13.jpg",
-        "kategori": "Kuliner"
-    },
-    {
-        "judul": "Proyek Website Sekolah Diluncurkan",
-        "author": "Dzaky Perwira Yasig",
-        "tanggal": "19 Oktober 2025",
-        "isi": "Website resmi SMKN 2 Padang Panjang kini menampilkan fitur berita, galeri, dan sistem absensi siswa.",
-        "gambar": "images/foto14.jpg",
-        "kategori": "Pendidikan"
-    },
-    {
-        "judul": "Peluncuran Produk Randang Raso Versi Premium",
-        "author": "Dzaky Perwira Yasig",
-        "tanggal": "20 Oktober 2025",
-        "isi": "Randang Raso menghadirkan varian premium dengan kemasan eksklusif dan cita rasa lebih autentik.",
-        "gambar": "images/foto15.jpg",
-        "kategori": "Kuliner"
-    },
-    {
-        "judul": "Pemanfaatan Energi Terbarukan di Sumatera Barat",
-        "author": "Rafli Ananda",
-        "tanggal": "21 Oktober 2025",
-        "isi": "Pemerintah daerah mulai menerapkan panel surya di sekolah dan kantor pemerintahan untuk mendukung energi bersih.",
-        "gambar": "images/foto16.jpg",
-        "kategori": "Lingkungan"
-    },
-    {
-        "judul": "Pameran Teknologi di Yogyakarta",
-        "author": "Daffa Perwira Yasig",
-        "tanggal": "22 Oktober 2025",
-        "isi": "Berbagai startup menampilkan inovasi teknologi di bidang AI, IoT, dan perangkat lunak modern.",
-        "gambar": "images/foto17.jpg",
-        "kategori": "Teknologi"
-    },
-    {
         "judul": "Generasi Muda dan Wirausaha Digital",
         "author": "Dzikra Alkhalifi Yasig",
         "tanggal": "23 Oktober 2025",
         "isi": "Anak muda kini lebih banyak terjun ke dunia wirausaha digital, memanfaatkan media sosial dan e-commerce.",
-        "gambar": "images/foto18.jpg",
+        "gambar": "images/foto1.jpg",
         "kategori": "Bisnis"
     }
 ]

@@ -17,6 +17,7 @@
             <li><a href="#home">Beranda</a></li>
             <li><a href="#articles">Artikel</a></li>
             <li><a href="#about">Tentang Perusahaan</a></li>
+            <li><a href="{{ route('blogs.create') }}">Tambah Blog</a></li>
         </ul>
         <button class="theme-toggle" id="theme-toggle">🌙</button>
     </nav>
@@ -36,13 +37,23 @@
         <section id="articles" class="articles-section">
             <h2>Artikel Terbaru</h2>
 
-            <!-- 🔍 Search -->
-            <input type="text" id="search-input" placeholder=" Cari artikel berdasarkan judul...">
+            
 
             <!-- 📚 Daftar Artikel -->
             <div id="articles-container" class="articles-container">
-                <!-- Artikel dimuat lewat script.js -->
-            </div>
+    @foreach ($blogs as $blog)
+        <div class="article-card">
+            <img 
+                src="{{ isset($blog['gambar']) ? asset($blog['gambar']) : asset($blog->gambar ?? 'images/default.jpg') }}" 
+                alt="{{ $blog['judul'] ?? $blog->judul }}"
+            >
+            <h3>{{ $blog['judul'] ?? $blog->judul }}</h3>
+            <p>{{ Str::limit($blog['isi'] ?? $blog->isi ?? '', 150) }}...</p>
+            <p><strong>Author:</strong> {{ $blog['author'] ?? 'Admin' }}</p>
+            <p><strong>Kategori:</strong> {{ $blog['kategori'] ?? '-' }}</p>
+        </div>
+    @endforeach
+</div>
 
             <!-- 🔢 Pagination -->
             <div class="pagination"></div>

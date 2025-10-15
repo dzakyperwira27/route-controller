@@ -11,7 +11,6 @@ const artikelPerHalaman = 4;
 function tampilkanArtikel() {
     const container = document.getElementById('articles-container');
     if (!container) return;
-    container.innerHTML = '';
 
     const mulai = (halamanAktif - 1) * artikelPerHalaman;
     const akhir = mulai + artikelPerHalaman;
@@ -76,18 +75,6 @@ function tampilkanPagination() {
 }
 
 // =====================================================
-// 🔹 LOAD DATA DARI JSON
-// =====================================================
-fetch('data/articles.json')
-    .then(response => response.json())
-    .then(data => {
-        semuaArtikel = data;
-        artikelTampil = data;
-        tampilkanArtikel();
-    })
-    .catch(error => console.error('⚠️ oomak gagal dia!', error));
-
-// =====================================================
 // 🔹 FITUR SEARCH (REALTIME FILTER)
 // =====================================================
 const searchInput = document.getElementById('search-input');
@@ -135,13 +122,13 @@ function aktifkanModal(data) {
 // =====================================================
 // 🔹 DARK MODE (DENGAN SIMPANAN LOCALSTORAGE)
 // =====================================================
-const themeToggle = document.getElementById('theme-toggle');
-if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        const isDark = document.body.classList.contains('dark-mode');
-        themeToggle.textContent = isDark ? '☀️' : '🌙';
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+const themeToggle = document.getElementById('theme-toggle'); //mengambil tombol dilaravel
+if (themeToggle) { //mengetahui apakah ada 
+    themeToggle.addEventListener('click', () => { //tombol untuk diklik
+        document.body.classList.toggle('dark-mode');  //tema diganti 
+        const isDark = document.body.classList.contains('dark-mode');//tema setelah diubah
+        themeToggle.textContent = isDark ? '☀️' : '🌙'; // untuk mengubah ikon kembali 
+        localStorage.setItem('theme', isDark ? 'dark' : 'light'); //tema yang tersimpan sekarang
     });
 }
 
@@ -154,3 +141,8 @@ window.addEventListener('load', () => {
         if (themeToggle) themeToggle.textContent = '🌙';
     }
 });
+
+
+
+
+
