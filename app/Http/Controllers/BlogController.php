@@ -24,7 +24,6 @@ class BlogController extends Controller
     // Menyimpan blog baru
     public function store(Request $request)
     {
-        // Validasi input
         $request->validate([
             'judul' => 'required|string|max:255',
             'author' => 'required|string|max:255',
@@ -36,36 +35,39 @@ class BlogController extends Controller
 
         $data = $request->all();
 
-        // Upload gambar jika ada
         if ($request->hasFile('gambar')) {
             $file = $request->file('gambar');
-            $path = $file->store('images', 'public');
-            $data['gambar'] = $path;
+            $namaFile = time() . '_' . $file->getClientOriginalName(); // nama unik
+            $tujuan = public_path('images'); // folder tujuan di public/images
+            $file->move($tujuan, $namaFile); // pindahkan file ke folder public/images
+            $data['gambar'] = 'images/' . $namaFile; // simpan path relatif
         }
+
 
         Blog::create($data);
 
         return redirect()->route('blogs.index')->with('success', 'Blog berhasil ditambahkan!');
     }
 
+
     // Menampilkan detail blog
     public function show($id)
     {
-        $blog = Blog::findOrFail($id);
-        return view('blogs.show', compact('blog'));
+        $blogs = Blog::findOrFail($id);
+        return view('blogs.show', compact('blogs'));
     }
 
     // Menampilkan form edit blog
     public function edit($id)
     {
-        $blog = Blog::findOrFail($id);
-        return view('blogs.edit', compact('blog'));
+        $blogs = Blog::findOrFail($id);
+        return view('blogs.edit', compact('blogs'));
     }
 
     // Update blog
     public function update(Request $request, $id)
     {
-        $blog = Blog::findOrFail($id);
+        $blogs = Blog::findOrFail($id);
 
         // Validasi input
         $request->validate([
@@ -81,15 +83,20 @@ class BlogController extends Controller
 
         // Upload gambar baru jika ada, hapus gambar lama
         if ($request->hasFile('gambar')) {
-            if ($blog->gambar) {
-                Storage::disk('public')->delete($blog->gambar);
+            // hapus gambar lama jika ada
+            if ($blogs->gambar && file_exists(public_path($blogs->gambar))) {
+                unlink(public_path($blogs->gambar));
             }
+
             $file = $request->file('gambar');
-            $path = $file->store('images', 'public');
-            $data['gambar'] = $path;
+            $namaFile = time() . '_' . $file->getClientOriginalName();
+            $tujuan = public_path('images');
+            $file->move($tujuan, $namaFile);
+            $data['gambar'] = 'images/' . $namaFile;
         }
 
-        $blog->update($data);
+
+        $blogs->update($data);
 
         return redirect()->route('blogs.index')->with('success', 'Blog berhasil diperbarui!');
     }
@@ -97,14 +104,14 @@ class BlogController extends Controller
     // Hapus blog
     public function destroy($id)
     {
-        $blog = Blog::findOrFail($id);
+        $blogs = Blog::findOrFail($id);
 
         // Hapus gambar dari storage jika ada
-        if ($blog->gambar) {
-            Storage::disk('public')->delete($blog->gambar);
+        if ($blogs->gambar) {
+            Storage::disk('public')->delete($blogs->gambar);
         }
 
-        $blog->delete();
+        $blogs->delete();
 
         return redirect()->route('blogs.index')->with('success', 'Blog berhasil dihapus!');
     }
