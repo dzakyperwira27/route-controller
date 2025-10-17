@@ -7,6 +7,8 @@ use App\Http\Controllers\BlogController;
 // Route landing page
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+
+
 // Prefix group untuk blogs
 Route::prefix('blogs')->name('blogs.')->group(function () {
     // Redirect jika akses /blogs langsung
